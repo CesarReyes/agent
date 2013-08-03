@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PidaTaxi</title>
+
+<link rel="stylesheet" href="assets/jquery.mobile-1.3.2.min.css" />
+<script src="assets/jquery-1.9.1.min.js"></script>
+<script src="assets/jquery.mobile-1.3.2.min.js"></script>
+<script src="assets/komira.js"></script>
+
+</head>
+<body>
+
+<!-- Login -->
+<div data-role="page" id="login-page">
+    <div data-role="content">
+        <h2>
+            PidaTaxi.com
+        </h2>
+        <form id="login-form" action="http://www.pidataxi.com.co/app/es/login/do_login"
+        method="POST">
+            <div data-role="fieldcontain">
+                <label for="username">
+                    Codigo
+                </label>
+                <input name="username" id="username" placeholder="" value="" type="text"
+                data-mini="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="password">
+                    Clave
+                </label>
+                <input name="password" id="password" placeholder="" value="" type="password"
+                data-mini="true">
+            </div>
+            <input type="button" data-theme="b" value="Ingresar" data-mini="true" id="do-login">
+        </form>
+    </div>
+</div>
+<!-- EndLogin -->
+
+<div data-role="page" id="dashboard-page" style="display:none">
+	hello
+</div>
+
+</body>
+</html>
