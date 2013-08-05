@@ -4,45 +4,88 @@
 <meta charset="UTF-8">
 <title>PidaTaxi</title>
 
-<link rel="stylesheet" href="assets/jquery.mobile-1.3.2.min.css" />
-<script src="assets/jquery-1.9.1.min.js"></script>
-<script src="assets/jquery.mobile-1.3.2.min.js"></script>
-<script src="assets/komira.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="assets/css/jquery.mobile-1.3.2.min.css" />
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+<script src="assets/js/jquery.mobile-1.3.2.min.js"></script>
+<script src="assets/js/komira.js"></script>
 
 </head>
 <body>
 
 <!-- Login -->
 <div data-role="page" id="login-page">
+    <div data-theme="e" data-role="header">
+        <h3>
+            PidaTaxi
+        </h3>
+    </div>
     <div data-role="content">
-        <h2>
-            PidaTaxi.com
-        </h2>
-        <form id="login-form" action="http://www.pidataxi.com.co/app/es/login/do_login"
-        method="POST">
+        <div style=" text-align:center">
+            <img style="width: 96px; height: 96px" src="assets/images/taxi-logo.png">
+        </div>
+        <form id="login-form" action="" method="POST">
             <div data-role="fieldcontain">
                 <label for="username">
                     Codigo
                 </label>
-                <input name="username" id="username" placeholder="" value="" type="text"
-                data-mini="true">
+                <input name="username" id="username" placeholder="" value="" type="text">
             </div>
             <div data-role="fieldcontain">
                 <label for="password">
                     Clave
                 </label>
-                <input name="password" id="password" placeholder="" value="" type="password"
-                data-mini="true">
+                <input name="password" id="password" placeholder="" value="" type="password">
             </div>
-            <input type="button" data-theme="b" value="Ingresar" data-mini="true" id="do-login">
+            <a href="#dashboard" data-role="button" id="show-dashboard" style="display: none;">Show page "two"</a>
+            <input type="button" data-theme="e" data-icon="arrow-r" data-iconpos="right"
+            value="Ingresar" id="do-login">
         </form>
+    </div>
+    <div data-theme="e" data-role="footer" data-position="fixed">
+        <h3>
+            © 2013 PidaTaxi
+        </h3>
     </div>
 </div>
 <!-- EndLogin -->
 
-<div data-role="page" id="dashboard-page" style="display:none">
-	hello
+
+<!-- Home -->
+<div data-role="page" id="dashboard">
+    <div data-theme="e" data-role="header">
+        <h3>
+            PidaTaxi
+        </h3>
+    </div>
+    <div data-role="content">
+        <div style="display: inline">
+            <img style="width: 40px; height: 40px" src="assets/images/taxi-logo.png">
+        </div>
+        <div data-role="fieldcontain">
+            <input name="current_position" id="current_position" placeholder="" value="" type="text" disabled="disabled">
+        </div>
+        <div data-role="fieldcontain">
+            <textarea name="msg-box" id="msg-box" placeholder="Dirección"></textarea>
+        </div>
+        <a data-role="button" data-theme="e" href="#page1" data-icon="plus" data-iconpos="left">
+            APLICO
+        </a>
+        <a data-role="button" data-theme="e" href="#page1" data-icon="check" data-iconpos="left">
+            ENTREGADO
+        </a>
+        <a data-role="button" href="#page1" data-icon="delete" data-iconpos="left">
+            CANCELAR
+        </a>
+    </div>
+    <div data-theme="e" data-role="footer" data-position="fixed">
+        <h3>
+            © 2013 PidaTaxi
+        </h3>
+    </div>
 </div>
+<!-- Home -->
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-var server = 'http://aplico.dev/es/';
+var server = 'http://agent.server/';
 var secCode = null;
 
 $(document).ready(function() {
@@ -9,8 +9,8 @@ $(document).ready(function() {
 		var password = $('#password').val();
 		
 	    $.ajax({
-	        type : "POST",
-	        url : server + 'login/start',        
+	        type : "GET",
+	        url : server + 'http://agent.server',        
 	        dataType : "json",
 	        data : {
 	        	username : username,
@@ -19,8 +19,7 @@ $(document).ready(function() {
 	    }).done(function(response){
 	    	console.log(response);
 	    	if(response.state=='ok'){
-	    		$('#login-page').hide();
-	    		$('#dashboard-page').show();
+	    		$("#show-dashboard").trigger('click');
 	    		
 	    		//TODO: inicia proceso de verificaciones
 	    	}else{
