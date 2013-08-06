@@ -1,4 +1,4 @@
-var server = 'http://aplico.dev/es/';
+var server = 'http://www.pidataxi.com.co/app/es/';
 
 var lat = lng = deslat = destlng = 0;
 var scode = null;
